@@ -1,0 +1,32 @@
+{
+  "name": "gh-battle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "prod": "webpack -p"
+  },
+  "author": "Tyler McGinnis <tylermcginnis33@gmail.com> (http://tylermcginnis.com)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.9.0",
+    "react": "^0.14.6",
+    "react-addons-css-transition-group": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-router": "^2.0.0-rc5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-3": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "html-webpack-plugin": "^2.7.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
