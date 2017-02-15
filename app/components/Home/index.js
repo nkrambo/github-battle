@@ -3,15 +3,15 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import MainContainer from '../MainContainer';
+import H1 from '../H1';
+import Button from '../Button';
 
 function Home() {
   return (
     <MainContainer>
-      <h1>Github Battle</h1>
-      <p>What even is a jQuery?</p>
-      <Link to="/playerOne">
-        <button type="button">Get Started</button>
-      </Link>
+      <H1>Github Battle</H1>
+      <Button>Get Started</Button>
+      <Link to="/playerOne"></Link>
     </MainContainer>
   );
 }

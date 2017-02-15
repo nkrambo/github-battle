@@ -7,7 +7,10 @@
     "prod": "webpack -p",
     "lint": "eslint --ignore-path .gitignore -- . ",
     "lint:staged": "lint-staged",
-    "pretest": "npm run lint"
+    "test:clean": "rimraf ./coverage",
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "author": "Nick Krambousanos",
   "license": "ISC",
@@ -81,7 +84,6 @@
     "jest-cli": "^18.1.0",
     "json-loader": "^0.5.4",
     "lint-staged": "^3.2.7",
-    "pre-commit": "^1.2.2",
     "react-addons-test-utils": "^15.4.2",
     "react-hot-loader": "^3.0.0-beta.6",
     "redux-devtools": "^3.3.2",
