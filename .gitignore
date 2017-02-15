@@ -1,1 +1,7 @@
-node_modules/
+node_modules
+coverage
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
