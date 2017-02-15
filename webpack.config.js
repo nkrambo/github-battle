@@ -18,14 +18,13 @@ module.exports = {
     // only- means to only hot reload for successful updates
 
 
-    './app/index.js',
+    './app.js',
     // the entry point of our app
   ],
   output: {
-    filename: 'index_bundle.js',
+    filename: 'bundle.js',
     // the output bundle
 
-    // path: resolve(__dirname, '/dist'),
     path: resolve(__dirname, 'app'),
 
     publicPath: '/',
@@ -63,6 +62,37 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
+        ],
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader',
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
+      }, {
+        test: /.*\.(gif|png|jpe?g|svg)$/i,
+        loaders: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            query: {
+              mozjpeg: {
+                progressive: true,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              optipng: {
+                optimizationLevel: 4,
+              },
+              pngquant: {
+                quality: '75-90',
+                speed: 3,
+              },
+            },
+          },
         ],
       },
     ],

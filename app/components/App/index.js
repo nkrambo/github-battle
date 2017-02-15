@@ -1,8 +1,8 @@
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-function App() {
+function App({ children, location }) {
   return (
     <div>
       <ReactCSSTransitionGroup
@@ -10,10 +10,15 @@ function App() {
         transitionEnterTimeout={500}
         transitionLeaveTimeout={500}
       >
-        {React.cloneElement(this.props.children, { key: this.props.location.pathname })}
+        {React.cloneElement(children, { key: location.pathname })}
       </ReactCSSTransitionGroup>
     </div>
   );
 }
+
+App.propTypes = {
+  children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
+};
 
 export default App;
